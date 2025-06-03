@@ -11,17 +11,28 @@ import Footer from "@/components/footer"
 import CookieConsent from "@/components/cookie-consent"
 import Modal from "@/components/modal"
 import { bettingSites } from "@/data/betting-sites"
+import TopSitesModal from "@/components/top-sites-modal"
 
 export default function HomePage() {
   const [showCookieConsent, setShowCookieConsent] = useState(false)
   const [showAgeModal, setShowAgeModal] = useState(false)
   const [showTermsModal, setShowTermsModal] = useState(false)
+  const [showTopSitesModal, setShowTopSitesModal] = useState(false)
 
   useEffect(() => {
     const hasAcceptedCookies = localStorage.getItem("cookiesAccepted")
     if (!hasAcceptedCookies) {
       setShowCookieConsent(true)
     }
+  }, [])
+
+  useEffect(() => {
+    // Show top sites modal after a short delay when page loads
+    const timer = setTimeout(() => {
+      setShowTopSitesModal(true)
+    }, 1500)
+
+    return () => clearTimeout(timer)
   }, [])
 
   const handleCookieAccept = () => {
@@ -80,6 +91,8 @@ export default function HomePage() {
           <p>Du skal være mindst 18 år for at deltage i gambling aktiviteter.</p>
         </div>
       </Modal>
+
+      <TopSitesModal sites={bettingSites} isOpen={showTopSitesModal} onClose={() => setShowTopSitesModal(false)} />
     </div>
   )
 }

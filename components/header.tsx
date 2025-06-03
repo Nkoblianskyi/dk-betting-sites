@@ -9,12 +9,8 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="flex items-center space-x-4">
-                <Link href="/" className="flex items-center space-x-2">
-                  <RugbyBallLogo />
-                  <span className="text-xl font-black text-white">DKBettingSites</span>
-                </Link>
-              </div>
+              <RugbyBallLogo />
+              <span className="text-xl font-black text-white">DKBettingSites</span>
             </Link>
           </div>
 
@@ -37,7 +33,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-gray-300 hover:text-yellow-400 font-semibold"
             >
-              <Image src="/ludomani.png" alt="Ludomani" width={80} height={80} />
+              <Image src="/ludomani.png" alt="Ludomani" width={60} height={60} />
             </a>
           </nav>
         </div>

@@ -49,14 +49,14 @@ export default function RatingList({ sites }: RatingListProps) {
                           src={site.logo || "/placeholder.svg"}
                           alt={site.name}
                           width={120}
-                          height={60}
+                          height={80}
                           className="rounded-lg border-2 border-gray-600 hover-scale"
                         />
                         {index === 0 && (
                           <div className="absolute -top-2 -right-2 bg-yellow-500 text-black text-xs font-bold px-1 py-0.5 rounded-full animate-bounce">
                             #1
                           </div>
-                        )}
+                        )}  
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white">{site.name}</h3>
@@ -76,10 +76,7 @@ export default function RatingList({ sites }: RatingListProps) {
                     </div>
 
                     {/* CTA Button */}
-                    <div
-                      className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-black px-6 py-3 text-lg shadow-xl border-2 border-red-400 transform hover:scale-105 transition-all animate-pulse-glow hover-lift rounded"
-                      onClick={(e) => e.preventDefault()}
-                    >
+                    <div className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-black px-6 py-3 text-lg shadow-xl border-2 border-red-400 transform hover:scale-105 transition-all animate-pulse-glow hover-lift rounded">
                       🎯 FÅ BONUS
                     </div>
                   </div>
