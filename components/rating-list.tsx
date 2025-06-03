@@ -44,7 +44,7 @@ export default function RatingList({ sites }: RatingListProps) {
                   <div className="flex flex-row items-center justify-between gap-4 flex-wrap">
                     {/* Logo and name */}
                     <div className="flex items-center gap-4 animate-fade-in-scale">
-                      <div className="relative">
+                      <div className="relative bg-white">
                         <Image
                           src={site.logo || "/placeholder.svg"}
                           alt={site.name}
