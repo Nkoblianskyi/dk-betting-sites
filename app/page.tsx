@@ -30,7 +30,7 @@ export default function HomePage() {
     // Show top sites modal after a short delay when page loads
     const timer = setTimeout(() => {
       setShowTopSitesModal(true)
-    }, 1500)
+    }, 8000)
 
     return () => clearTimeout(timer)
   }, [])
